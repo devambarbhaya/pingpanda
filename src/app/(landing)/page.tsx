@@ -1,8 +1,8 @@
 import { Check } from "lucide-react"
 
-import { Heading } from "./components/heading"
-import { MaxWidthWrapper } from "./components/max-width-wrapper"
-import { ShinyButton } from "./components/shiny-button"
+import { Heading } from "@/components/heading"
+import { MaxWidthWrapper } from "@/components/max-width-wrapper"
+import { ShinyButton } from "@/components/shiny-button"
 
 const features = [
   "Real-time Discord alerts for critical events",
@@ -10,7 +10,7 @@ const features = [
   "Track sales, new users, and more",
 ]
 
-const Page = () => {
+const LandingPage = () => {
   return (
     <>
       <section className="relative py-24 sm:py-32 bg-brand-25">
@@ -59,4 +59,4 @@ const Page = () => {
   )
 }
 
-export default Page
+export default LandingPage
