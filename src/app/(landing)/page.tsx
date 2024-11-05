@@ -3,6 +3,9 @@ import { Check } from "lucide-react"
 import { Heading } from "@/components/heading"
 import { MaxWidthWrapper } from "@/components/max-width-wrapper"
 import { ShinyButton } from "@/components/shiny-button"
+import { MockDiscordUI } from "@/components/mock-discord-ui"
+import { AnimatedList, AnimatedListItem } from "@/components/ui/animated-list"
+import { DiscordMessage } from "@/components/discord-message"
 
 const features = [
   "Real-time Discord alerts for critical events",
@@ -52,7 +55,59 @@ const LandingPage = () => {
           </div>
         </MaxWidthWrapper>
       </section>
-      <section></section>
+      <section className="relative bg-brand-25 pb-4">
+        <div className="absolute inset-x-0 bottom-24 top-24 bg-brand-700" />
+        <div className="relative">
+          <MaxWidthWrapper className="relative">
+            <div className="-m-2 rounded-xl bg-gray-900/5 p-2 ring-1 ring-inset ring-gray-900/10 lg:-m-4 lg:rounded-2xl lg:p-4 flex items-center justify-center">
+              <MockDiscordUI>
+                <AnimatedList>
+                  <DiscordMessage
+                    avatarSrc={"/brand-asset-profile-picture.png"}
+                    avatarAlt="Ping Panda Avatar"
+                    username="PingPanda"
+                    timestamp="Today at 12:55 PM"
+                    badgeText="Sign Up"
+                    badgeColor="#43B581"
+                    title="🥳 New user signed up"
+                    content={{
+                      Name: "Rutu Doshi",
+                      Email: "rutu.doshi@gmail.com",
+                    }}
+                  />
+                  <DiscordMessage
+                    avatarSrc={"/brand-asset-profile-picture.png"}
+                    avatarAlt="Ping Panda Avatar"
+                    username="PingPanda"
+                    timestamp="Today at 3:21 PM"
+                    badgeText="Revenue"
+                    badgeColor="#FAA61A"
+                    title="💰 Payment received"
+                    content={{
+                      Amount: "$29.99",
+                      Plan: "PRO",
+                      Email: "diti.mehta@gmail.com",
+                    }}
+                  />
+                  <DiscordMessage
+                    avatarSrc={"/brand-asset-profile-picture.png"}
+                    avatarAlt="Ping Panda Avatar"
+                    username="PingPanda"
+                    timestamp="Today at 7:12 PM"
+                    badgeText="Milestone"
+                    badgeColor=""
+                    title="🚀 Revenue Milestone Achieved"
+                    content={{
+                      RecurringRevenue: "5,000 USD",
+                      Growth: "+8.2%",
+                    }}
+                  />
+                </AnimatedList>
+              </MockDiscordUI>
+            </div>
+          </MaxWidthWrapper>
+        </div>
+      </section>
       <section></section>
       <section></section>
     </>
