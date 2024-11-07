@@ -24,7 +24,7 @@ enum DeliveryStatus {
 
 model User {
   id         String  @id @default(cuid())
-  extrnalId  String? @unique
+  externalId String? @unique
   email      String  @unique
   apiKey     String  @unique @default(cuid())
   discordId  String?
